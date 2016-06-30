@@ -1,0 +1,22 @@
+extends ../../../_inc/modal
+
+block body
+	.row
+		.col-md-6
+			.form-group
+				label.control-label Тип занятия
+				select.form-control(name='duration')
+					each lt in lessonTypeList
+						option(value=lt.duration)=lt.title
+
+			.form-group
+				label.control-label Количество занятий
+				input.form-control(type='text',name='amount')
+		.col-md-6
+			.form-group
+				label.control-label Цена
+				input.form-control(type='text',name='price')
+
+block footer
+	button.btn.btn-default(type='button',data-dismiss='modal') Отмена
+	button.btn.btn-primary(type='submit') Ок

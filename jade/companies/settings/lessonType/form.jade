@@ -1,0 +1,24 @@
+extends ../../../_inc/modal
+
+block body
+	.row
+		.col-md-6
+			.form-group
+				label.control-label Название
+				input.form-control(type='text',name='title',value=model.title)
+
+			.form-group
+				label.control-label Продолжительность (минут)
+				input.form-control(type='text',name='duration',value=model.duration)
+		.col-md-6
+			.form-group
+				label.control-label Стоимость разового занятия в группе
+				input.form-control(type='text',name='singlePriceGroup',value=model.singlePriceGroup)
+
+			.form-group
+				label.control-label Стоимость разового индивидуального занятия
+				input.form-control(type='text',name='singlePriceIndividual',value=model.singlePriceIndividual)
+
+block footer
+	button.btn.btn-default(type='button',data-dismiss='modal') Отмена
+	button.btn.btn-primary(type='submit') Ок

@@ -1,0 +1,24 @@
+.row
+	.col-md-4
+		.form-group
+			label День
+			.input-group-btn
+				each dows,dowi in daysOfWeek
+					button.btn.btn-default.dow-btn(data-day=dowi + 1,type='button',data-action='timetable:dow')= dows
+
+	.col-md-2
+		.form-group
+			label Время
+			input.form-control.text-center(type='time',name='time')
+	.col-md-5
+		.form-group
+			label Место
+			select.form-control(name='place')
+				option(value='') Выберите место
+				each place in placeList
+					option(value=place.id)= place.title
+	.col-md-1
+		.form-group
+			label &nbsp;
+			button.btn.btn-default.form-control(type='button',data-action='timetable:remove')
+				span.glyphicon.glyphicon-remove-sign

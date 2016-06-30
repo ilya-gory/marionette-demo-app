@@ -1,0 +1,39 @@
+extends ../_inc/modal
+
+block body
+	.form-group
+		label Дата
+		input.form-control(type='date',name='date',value=_.date(date))
+
+	.form-group
+		.btn-group
+			button.btn.btn-default(type='button',data-action='type:duty')
+				span.glyphicon.glyphicon-calendar
+				| &nbsp;
+				| По расписанию
+			button.btn.btn-default(type='button',data-action='type:wildcat')
+				span.glyphicon.glyphicon-plus-sign
+				| &nbsp;
+				| Дополнительное
+
+	.form-group
+		label Курс
+		select.form-control(name='course',disabled=true)
+
+	.form-group
+		label Преподаватель
+			| &nbsp;
+			button.btn.btn-default(type='button',data-action='cover:don')
+				span.glyphicon.glyphicon-refresh
+				| &nbsp;
+				| Замена
+
+		.form-control-static
+			span.don-holder.hidden
+			.row.hidden.don-cover-holder
+				.col-md-6
+					select.form-control(name='donCover')
+						option Выберите замену
+				.col-md-6
+					button.btn.btn-default(type='button',data-action='don:cover:clear')
+						span.glyphicon.glyphicon-remove

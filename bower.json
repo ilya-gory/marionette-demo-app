@@ -1,0 +1,23 @@
+{
+  "name": "realcom.admin",
+  "authors": [
+    "kolo <kolo@wrkshop.biz>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "backbone.marionette": "marionette#^2.4.5",
+    "backbone.radio": "^1.0.4",
+    "lodash": "^3",
+    "blockUI": "blockui#*",
+    "system.js": "^0.19.26",
+    "traceur": "^0.0.107",
+    "bootstrap-sass": "^3.3.6",
+    "jade": "^1.11.0",
+    "select2": "select2-ng#^4.0.2"
+  }
+}

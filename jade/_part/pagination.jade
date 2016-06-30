@@ -1,0 +1,6 @@
+each p in pages
+	li(class={active: p == active})
+		if _.isString(p)
+			span= p
+		else
+			a(href="#",data-page=p)= p

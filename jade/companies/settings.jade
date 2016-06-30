@@ -1,0 +1,23 @@
+h1.page-header
+	| Настройки
+
+.row
+	.col-md-6
+		h2.page-header Типы занятий
+			small
+				button.btn.btn-default(data-ui='add-lesson-type',type='button')
+					span.glyphicon.glyphicon-plus-sign
+					| Добавить тип занятия
+
+		.lesson-type-list.table-page-header
+	.col-md-6
+		h2.page-header Цена абонементов
+			small
+				button.btn.btn-default(data-ui='add-membership-price',type='button',disabled=true)
+					span.glyphicon.glyphicon-plus-sign
+					| Добавить цену
+
+		.membership-price-list.table-page-header
+
+
+.form-modal-holder

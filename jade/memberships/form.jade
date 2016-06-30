@@ -1,0 +1,16 @@
+extends ../_inc/modal
+
+block body
+	.form-group
+		label.control-label Номер
+		input.form-control(type='text',name='seqNum',value=seqNum,readonly=isNew != true)
+		p.help-block будет сгенерирован, если пусто
+
+	.form-group
+		label.control-label
+			| Студент
+			button.btn.btn-sm.btn-default(type='button',data-action="student:add"): span.glyphicon.glyphicon-plus-sign
+		select.form-control.s2(name='student')
+			option
+			each st in students
+				option(value=st.id,selected=(st.id == student.id)) #{st.firstName} #{st.lastName}

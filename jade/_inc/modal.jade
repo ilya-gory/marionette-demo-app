@@ -1,0 +1,22 @@
+mixin header
+	.modal-header
+		block header
+			button(type='button',class='close',data-dismiss='modal') &times;
+			h4.modal-title
+				block title
+
+mixin footer
+	.modal-footer
+		block footer
+			button.btn.btn-default(type='button',data-dismiss='modal') Отмена
+			button.btn.btn-primary(type='button',data-action='modal:ok') Ок
+
+.modal.fade(role='dialog')
+	.modal-dialog(class={'modal-lg': large == true})
+		.modal-content
+			if title
+				+header
+			.modal-body
+				block body
+			if footer
+				+footer

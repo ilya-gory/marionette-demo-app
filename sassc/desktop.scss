@@ -1,0 +1,55 @@
+$icon-font-path: '/static/app/bower_components/bootstrap-sass/assets/fonts/bootstrap/';
+$font-size-base: 12px;
+$bbr: 1px;
+$border-radius-base: $bbr;
+$border-radius-large: $bbr;
+$border-radius-small: $bbr;
+$dmcrm_yellow: #f09300;
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../bower_components/select2/dist/css/select2.css";
+
+h1, h2, h3 {
+	&.page-header {
+		margin-top: 0;
+		small > button {
+			margin-left: 1rem;
+		}
+	}
+}
+
+.control-label > button.btn {
+	margin-left: 1rem;
+}
+
+.list-group-item {
+	> span.glyphicon {
+		margin-right: .5rem;
+	}
+	&:hover {
+		> span.glyphicon {
+			color: $dmcrm_yellow;
+		}
+	}
+}
+
+.table {
+	font-size: $font-size-base;
+}
+
+.btn {
+	box-shadow: 1px 1px 0 $gray-lighter;
+}
+
+.modal-content {
+	@include box-shadow(0 1px 3px rgba(0, 0, 0, .5));
+}
+
+.page-header {
+	& + table.table, & + .table-page-header {
+		margin-top: -17px;
+		> thead > tr > th {
+			border-top: 0;
+		}
+	}
+}

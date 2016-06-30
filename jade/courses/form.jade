@@ -1,0 +1,40 @@
+extends ../_inc/modal
+
+block body
+	if !isNew
+		.form-group
+			input.form-control(type='text',readonly=true,value=model.id)
+
+	.row
+		.col-md-6
+			.form-group
+				label.control-label Название
+				input.form-control(type="text",name='title',value=model.title)
+
+			.form-group
+				label.control-label Тренер
+				select.s2.form-control(name='don',data-placeholder='Выберите тренера')
+					each d in donList
+						option(value=d.id,selected=model.don.id == d.id) #{d.firstName} #{d.lastName}
+
+			.form-group
+				label.control-label Продолжительность занятия
+				select.form-control(name='duration')
+					option(value='',disabled=true,selected=true) Выберите продолжительность
+					each dur in durationList
+						option(value=dur.duration)= dur.title
+
+		.col-md-6
+			.form-group
+				label.control-label Описание
+				textarea.form-control(name='description',rows=10)= description
+
+	h3.page-header
+		| Расписание
+		small
+			button.btn.btn-default(type='button',data-action='timetable:add')
+				span.glyphicon.glyphicon-plus-sign
+				| &nbsp;
+				| Добавить день
+
+	.timetable

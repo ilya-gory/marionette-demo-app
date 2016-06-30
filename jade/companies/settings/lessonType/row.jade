@@ -1,0 +1,16 @@
+td= title
+td= duration
+td
+	=singlePriceIndividual
+	if singlePriceIndividual
+		span.glyphicon.glyphicon-rub
+td
+	=singlePriceGroup
+	if singlePriceGroup
+		span.glyphicon.glyphicon-rub
+td
+	.btn-group
+		button.btn.btn-default(type='button',data-action='edit')
+			span.glyphicon.glyphicon-pencil
+		button.btn.btn-default(type='button',data-action='remove')
+			span.glyphicon.glyphicon-remove
